@@ -1,3 +1,6 @@
+//input diagonal and upper diagonal matrix and make symmetric matrix from it..
+
+
 #include<iostream>
 
 using namespace std;
