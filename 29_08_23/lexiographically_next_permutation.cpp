@@ -12,47 +12,55 @@ using namespace std;
 
 int noOfPairs(int *a, int size){
     int c = 0;
-    for (int i = size; i > 0; i--)
+    for (int i = size-1; i > 0; i--)
     {
-        if(a[i-1] > a[i]){
+        if(a[i-1] >= a[i]){
             c++;
+        }else{
+            break;
         }
+
     }
     return c + 1;
 }
 
 
 int main(){
-cout << "NO OF ELEMENTS" << endl;
-int size;
-cin >> size;
-cout << endl;
-cout << endl;
-cout << endl;
+// cout << "NO OF ELEMENTS" << endl;
+// int size;
+// cin >> size;
+// cout << endl;
+// cout << endl;
+// cout << endl;
 
-int *a = new int[size];
+// int *a = new int[size];
 
-for (int i = 0; i < size; i++)
-{
-    cin >> a[i];
-}
+int size = 6;
+int a[] = {4,2,2,0,3,3};
+
+// for (int i = 0; i < size; i++)
+// {
+//     cin >> a[i];
+// }
 
 
 int removeIndex = size - noOfPairs(a, size) - 1;
-// cout <<  noOfPairs(a, size) << "   - >    " << removeIndex << endl;
+cout <<  noOfPairs(a, size) << "   - >    " << removeIndex << endl;
 
 int maxIndex = 0;
 
-for (int i = removeIndex; i < size; i++)
+int prevDiff;
+  int diff;
+
+for (int i = removeIndex + 1; i < size; i++)
 {
-    int max = a[i];
-    if(i == size - 1){
-      continue;
-    }
-    if(a[i+1] > a[i]){
-        max = a[i+1];
-        maxIndex = i + 1;
-        break;
+    if(a[i] > a[removeIndex]){
+    diff = a[i] - a[removeIndex];
+    if(prevDiff < diff){
+        continue;
+       }
+       maxIndex = i;
+       prevDiff = diff;
     }
 }
 
