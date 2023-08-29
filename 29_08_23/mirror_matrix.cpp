@@ -1,5 +1,5 @@
 //input diagonal and upper diagonal matrix and make symmetric matrix from it..
-
+//array question
 
 #include<iostream>
 
