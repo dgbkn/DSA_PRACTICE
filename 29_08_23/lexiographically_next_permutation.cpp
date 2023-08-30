@@ -35,8 +35,8 @@ int main(){
 
 // int *a = new int[size];
 
-int size = 6;
-int a[] = {4,2,2,0,3,3};
+int size = 10;
+int a[] = {9,8,2,5,8,5,1,3,1,0};
 
 // for (int i = 0; i < size; i++)
 // {
