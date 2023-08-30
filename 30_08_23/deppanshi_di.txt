@@ -2,6 +2,10 @@ https://leetcode.com/problems/reverse-linked-list/
 
 Heer and tortoise approch
 one pointer moves 2X the times of 1 pointer
+
+https://leetcode.com/problems/reverse-linked-list/
+
+
 https://leetcode.com/problems/middle-of-the-linked-list/
 
 
